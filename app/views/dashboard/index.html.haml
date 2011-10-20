@@ -1,1 +1,10 @@
-Hello world
+%h1 Netflix Movies
+
+%ul
+  -@list.titles.each do |title|
+    %li
+      %a{:href => "http://movies.netflix.com/WiMovie/#{title.id}", :target => '_blank'}= "#{title.title} - #{title.mpaa_rating}"
+
+%ul
+  -@list.titles.each do |title|
+    %li= title.inspect

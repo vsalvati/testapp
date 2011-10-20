@@ -8,6 +8,7 @@ gem 'rails', '3.1.1'
 gem 'sqlite3'
 gem 'haml'
 gem 'heroku'
+gem 'netflix4ruby', :git => 'https://github.com/aramis/netflix4ruby'
 
 
 # Gems used only for assets and not required
