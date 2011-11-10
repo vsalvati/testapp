@@ -1,10 +1,21 @@
-%h1 Netflix Movies
+.wrapper
+  %h1
+    My Netflix Movies
+  .demos
+    %table
+    -@discqueue.items.each do |movie|
+      %tr
+      #demo
+        %td
+          %a{:href => "http://movies.netflix.com/WiMovie/#{movie.id}", :target => '_blank'}= "#{movie.title}"
+  %h2
+    %form_tag{:controller => "dashboard", :action => "/search", :method => "get", :class => "nifty_form"}
+    %label{:for => "name"} Movie Title:
+    %input{:type=>'text', :size=>40, :name=>'name', :id=>'name'}
+    %br/
+    %input{:type=>'submit', :value=>'Search'}
 
-%ul
-  -@list.titles.each do |title|
-    %li
-      %a{:href => "http://movies.netflix.com/WiMovie/#{title.id}", :target => '_blank'}= "#{title.title} - #{title.mpaa_rating}"
 
-%ul
-  -@list.titles.each do |title|
-    %li= title.inspect
+
+
+

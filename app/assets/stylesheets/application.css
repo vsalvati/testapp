@@ -3,5 +3,53 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require_tree . 
+ *= require_tree .
 */
+
+body {
+    background: none repeat scroll 0 0 #B9090B;
+    font: 16px/20px "Helvetica Neue",Helvetica,sans-serif;
+    margin: 40px 0 0;
+    padding: 0;
+}
+
+.wrapper {
+    background: url("../images/shade.jpg") repeat-x scroll center bottom #FCF5D8;
+    border-radius: 10px 10px 10px 10px;
+    border-top: 1px solid #FFFFFF;
+    margin: 0 auto;
+    padding-bottom: 76px;
+    width: 800px;
+}
+h1 {
+    padding-top: 10px;  text-align: center;
+}
+h2 {
+    font-size: 100%;
+    font-style: italic;
+}
+#demos {
+    border-collapse: collapse;
+    width: 560px;
+}
+#demos .demo {
+    padding: 5px;
+}
+#demos a {
+    color: #0000BB;
+    font-size: 14px;
+    text-decoration: none;
+}
+#demos a:hover {
+    text-decoration: underline;
+}
+#demos tbody tr {
+    border-top: 1px solid #DCDCDC;
+}
+#demos .demo p {
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+#demos .support {
+    width: 126px;
+}
